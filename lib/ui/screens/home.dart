@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:ubuntu_calculator/ui/screens/calculator.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,6 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
       theme: ThemeData(
         primaryColor: Colors.blueGrey.shade900,
       ),
+      home: const CalculatorScreen(),
     );
   }
 }
