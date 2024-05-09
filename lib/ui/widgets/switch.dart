@@ -36,7 +36,9 @@ class _SwitchModeState extends State<SwitchMode> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  print('Light');
+                },
                 child: const SizedBox(
                   height: 30,
                   child: Icon(
@@ -46,7 +48,9 @@ class _SwitchModeState extends State<SwitchMode> {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  print('Dark');
+                },
                 child: const SizedBox(
                   height: 30,
                   child: Icon(
