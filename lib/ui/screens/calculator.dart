@@ -37,17 +37,19 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             height: 8,
           ),
           const SwitchMode(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Wrap(
+            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            alignment: WrapAlignment.spaceAround,
+            spacing: 20,
             children: [
-              buttonHelper(
-                  'AC', const Color(0xffe0e8ee), () => buttonPressed('AC')),
-              buttonHelper(
-                  '%', const Color(0xffe0e8ee), () => buttonPressed('%')),
-              buttonHelper(
-                  '÷', const Color(0xffe0e8ee), () => buttonPressed('÷')),
-              buttonHelper(
-                  "×", const Color(0xffe0e8ee), () => buttonPressed('×')),
+              buttonHelper('AC', const Color(0xffe9eff3),
+                  const Color(0xff02c984), () => buttonPressed('AC')),
+              buttonHelper('+/-', const Color(0xffe9eff3),
+                  const Color(0xff02c984), () => buttonPressed('+/-')),
+              buttonHelper('%', const Color(0xffe9eff3),
+                  const Color(0xff02c984), () => buttonPressed('%')),
+              buttonHelper("÷", const Color(0xffe9eff3),
+                  const Color(0xffaf343b), () => buttonPressed('÷')),
             ],
           ),
         ],
