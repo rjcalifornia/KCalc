@@ -31,42 +31,54 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           color: Color(0xfffafafa),
         ),
       ),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 8,
-          ),
-          Expanded(
-              child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0),
-                    child: Wrap(
-                      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      alignment: WrapAlignment.spaceAround,
-                      spacing: 20,
-                      children: [
-                        buttonHelper('AC', const Color(0xff23252d),
-                            const Color(0xff02c984), () => buttonPressed('AC')),
-                        buttonHelper(
-                            '+/-',
-                            const Color(0xff23252d),
-                            const Color(0xff02c984),
-                            () => buttonPressed('+/-')),
-                        buttonHelper('%', const Color(0xff23252d),
-                            const Color(0xff02c984), () => buttonPressed('%')),
-                        buttonHelper("÷", const Color(0xff23252d),
-                            const Color(0xffaf343b), () => buttonPressed('÷')),
-                      ],
-                    ),
-                  ))
-            ],
-          ))
-        ],
+      body: Padding(
+        padding: new EdgeInsets.all(20),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 8,
+            ),
+            Expanded(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0),
+                      child: Wrap(
+                        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        alignment: WrapAlignment.spaceAround,
+                        spacing: 18,
+                        children: [
+                          buttonHelper(
+                              'AC',
+                              const Color(0xff23252d),
+                              const Color(0xff02c984),
+                              () => buttonPressed('AC')),
+                          buttonHelper(
+                              '+/-',
+                              const Color(0xff23252d),
+                              const Color(0xff02c984),
+                              () => buttonPressed('+/-')),
+                          buttonHelper(
+                              '%',
+                              const Color(0xff23252d),
+                              const Color(0xff02c984),
+                              () => buttonPressed('%')),
+                          buttonHelper(
+                              "÷",
+                              const Color(0xff23252d),
+                              const Color(0xffaf343b),
+                              () => buttonPressed('÷')),
+                        ],
+                      ),
+                    ))
+              ],
+            ))
+          ],
+        ),
       ),
     ));
   }
