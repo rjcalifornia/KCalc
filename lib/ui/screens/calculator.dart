@@ -22,13 +22,13 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
     return SafeArea(
         child: Scaffold(
-      backgroundColor: const Color(0xffecf0f3),
+      backgroundColor: const Color(0xff2c2c37),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xffecf0f3),
+        backgroundColor: const Color(0xff2c2c37),
         leading: const Icon(
           Icons.settings_outlined,
-          color: Color(0xff324056),
+          color: Color(0xfffafafa),
         ),
       ),
       body: Column(
@@ -36,22 +36,36 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           const SizedBox(
             height: 8,
           ),
-          const SwitchMode(),
-          Wrap(
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            alignment: WrapAlignment.spaceAround,
-            spacing: 20,
+          Expanded(
+              child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              buttonHelper('AC', const Color(0xffe9eff3),
-                  const Color(0xff02c984), () => buttonPressed('AC')),
-              buttonHelper('+/-', const Color(0xffe9eff3),
-                  const Color(0xff02c984), () => buttonPressed('+/-')),
-              buttonHelper('%', const Color(0xffe9eff3),
-                  const Color(0xff02c984), () => buttonPressed('%')),
-              buttonHelper("÷", const Color(0xffe9eff3),
-                  const Color(0xffaf343b), () => buttonPressed('÷')),
+              Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0),
+                    child: Wrap(
+                      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      alignment: WrapAlignment.spaceAround,
+                      spacing: 20,
+                      children: [
+                        buttonHelper('AC', const Color(0xff23252d),
+                            const Color(0xff02c984), () => buttonPressed('AC')),
+                        buttonHelper(
+                            '+/-',
+                            const Color(0xff23252d),
+                            const Color(0xff02c984),
+                            () => buttonPressed('+/-')),
+                        buttonHelper('%', const Color(0xff23252d),
+                            const Color(0xff02c984), () => buttonPressed('%')),
+                        buttonHelper("÷", const Color(0xff23252d),
+                            const Color(0xffaf343b), () => buttonPressed('÷')),
+                      ],
+                    ),
+                  ))
             ],
-          ),
+          ))
         ],
       ),
     ));
