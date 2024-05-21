@@ -52,31 +52,67 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                         alignment: WrapAlignment.spaceAround,
                         spacing: 18,
                         children: [
-                          buttonHelper(
-                              'AC',
-                              const Color(0xff23252d),
-                              const Color(0xff02c984),
-                              () => buttonPressed('AC')),
-                          buttonHelper(
-                              '+/-',
-                              const Color(0xff23252d),
-                              const Color(0xff02c984),
-                              () => buttonPressed('+/-')),
-                          buttonHelper(
-                              '%',
-                              const Color(0xff23252d),
-                              const Color(0xff02c984),
-                              () => buttonPressed('%')),
-                          buttonHelper(
-                              "÷",
-                              const Color(0xff23252d),
-                              const Color(0xffaf343b),
-                              () => buttonPressed('÷')),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              buttonHelper(
+                                  'AC',
+                                  const Color(0xff23252d),
+                                  const Color(0xff02c984),
+                                  () => buttonPressed('AC')),
+                              buttonHelper(
+                                  '+/-',
+                                  const Color(0xff23252d),
+                                  const Color(0xff02c984),
+                                  () => buttonPressed('+/-')),
+                              buttonHelper(
+                                  '%',
+                                  const Color(0xff23252d),
+                                  const Color(0xff02c984),
+                                  () => buttonPressed('%')),
+                              buttonHelper(
+                                  "÷",
+                                  const Color(0xff23252d),
+                                  const Color(0xffaf343b),
+                                  () => buttonPressed('÷')),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 18,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              buttonHelper(
+                                  '7',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('7')),
+                              buttonHelper(
+                                  '8',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('8')),
+                              buttonHelper(
+                                  '9',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('9')),
+                              buttonHelper(
+                                  "x",
+                                  const Color(0xff23252d),
+                                  const Color(0xffaf343b),
+                                  () => buttonPressed('x')),
+                            ],
+                          )
                         ],
                       ),
                     ))
               ],
-            ))
+            )),
+            const SizedBox(
+              height: 8,
+            ),
           ],
         ),
       ),
