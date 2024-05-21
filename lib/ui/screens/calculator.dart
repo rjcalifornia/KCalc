@@ -73,7 +73,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               buttonHelper(
                                   "÷",
                                   const Color(0xff23252d),
-                                  const Color(0xffaf343b),
+                                  const Color(0xffc14a51),
                                   () => buttonPressed('÷')),
                             ],
                           ),
@@ -99,10 +99,92 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                                   const Color(0xffffffff),
                                   () => buttonPressed('9')),
                               buttonHelper(
-                                  "x",
+                                  "*",
                                   const Color(0xff23252d),
-                                  const Color(0xffaf343b),
-                                  () => buttonPressed('x')),
+                                  const Color(0xffc14a51),
+                                  () => buttonPressed('*')),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 18,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              buttonHelper(
+                                  '4',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('4')),
+                              buttonHelper(
+                                  '5',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('5')),
+                              buttonHelper(
+                                  '6',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('6')),
+                              buttonHelper(
+                                  "-",
+                                  const Color(0xff23252d),
+                                  const Color(0xffc14a51),
+                                  () => buttonPressed('-')),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 18,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              buttonHelper(
+                                  '1',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('4')),
+                              buttonHelper(
+                                  '2',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('5')),
+                              buttonHelper(
+                                  '3',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('6')),
+                              buttonHelper(
+                                  "+",
+                                  const Color(0xff23252d),
+                                  const Color(0xffc14a51),
+                                  () => buttonPressed('+')),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 18,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const SizedBox(
+                                width: 75,
+                              ),
+                              buttonHelper(
+                                  '0',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('0')),
+                              buttonHelper(
+                                  '.',
+                                  const Color(0xff23252d),
+                                  const Color(0xffffffff),
+                                  () => buttonPressed('.')),
+                              buttonHelper(
+                                  "=",
+                                  const Color(0xff23252d),
+                                  const Color(0xffc14a51),
+                                  () => buttonPressed('=')),
                             ],
                           )
                         ],

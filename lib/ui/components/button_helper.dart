@@ -5,7 +5,8 @@ Widget buttonHelper(String buttonText, Color buttonColor, Color textColor,
     void Function()? buttonPressed) {
   return Container(
     width: 75,
-    height: buttonText == '=' ? 150 : 74,
+    //height: buttonText == '=' ? 150 : 74,
+    height: 74,
     padding: const EdgeInsets.all(0),
     child: ElevatedButton(
       onPressed: buttonPressed,
