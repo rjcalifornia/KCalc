@@ -21,11 +21,30 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         child: Scaffold(
       backgroundColor: const Color(0xff2c2c37),
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: const Color(0xff2c2c37),
-        leading: const Icon(
-          Icons.menu_outlined,
-          color: Color(0xfffafafa),
+          elevation: 0,
+          backgroundColor: const Color(0xff2c2c37),
+          leading: Builder(builder: (context) {
+            return IconButton(
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              icon: const Icon(
+                Icons.menu_outlined,
+                color: Color(0xfffafafa),
+              ),
+            );
+          })),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            ListTile(
+              title: const Text('About'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+          ],
         ),
       ),
       body: Padding(
