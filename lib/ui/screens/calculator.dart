@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:ubuntu_calculator/ui/widgets/switch.dart';
+import 'package:ubuntu_calculator/ui/widgets/button_area.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({super.key});
@@ -18,8 +17,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     double equationFontSize = 38.0;
     double resultFontSize = 48.0;
 
-    buttonPressed(String buttonText) {}
-
     return SafeArea(
         child: Scaffold(
       backgroundColor: const Color(0xff2c2c37),
@@ -33,12 +30,13 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       ),
       body: Padding(
         padding: new EdgeInsets.all(20),
-        child: Column(
+        child: const Column(
           children: [
-            const SizedBox(
+            SizedBox(
               height: 8,
             ),
-            const SizedBox(
+            ButtonArea(),
+            SizedBox(
               height: 8,
             ),
           ],

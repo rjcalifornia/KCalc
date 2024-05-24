@@ -11,6 +11,7 @@ class ButtonArea extends StatefulWidget {
 class _ButtonAreaState extends State<ButtonArea> {
   @override
   Widget build(BuildContext context) {
+    buttonPressed(String buttonText) {}
     return Expanded(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.end,
