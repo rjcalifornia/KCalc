@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ubuntu_calculator/ui/components/button_helper.dart';
 import 'package:ubuntu_calculator/ui/utils/functions.dart';
 
@@ -11,7 +12,13 @@ class ButtonArea extends StatefulWidget {
 }
 
 class _ButtonAreaState extends State<ButtonArea> {
+  final FocusNode _focusNode = FocusNode();
   @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Expanded(
         child: Column(
@@ -49,8 +56,21 @@ class _ButtonAreaState extends State<ButtonArea> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      buttonHelper('7', const Color(0xff23252d),
-                          const Color(0xffffffff), () => widget.function('7')),
+                      KeyboardListener(
+                        focusNode: _focusNode,
+                        autofocus: true,
+                        onKeyEvent: (event) {
+                          if (event is KeyDownEvent &&
+                              event.character != null) {
+                            widget.function(event.character);
+                          }
+                        },
+                        child: buttonHelper(
+                            '7',
+                            const Color(0xff23252d),
+                            const Color(0xffffffff),
+                            () => widget.function('7')),
+                      ),
                       buttonHelper('8', const Color(0xff23252d),
                           const Color(0xffffffff), () => widget.function('8')),
                       buttonHelper('9', const Color(0xff23252d),

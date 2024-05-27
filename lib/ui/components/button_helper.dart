@@ -17,7 +17,7 @@ Widget buttonHelper(String buttonText, Color buttonColor, Color textColor,
           backgroundColor: buttonColor),
       child: Text(
         buttonText,
-        style: GoogleFonts.roboto(fontSize: 20, color: textColor),
+        style: GoogleFonts.roboto(fontSize: 18, color: textColor),
       ),
     ),
   );
