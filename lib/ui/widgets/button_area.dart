@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ubuntu_calculator/ui/components/button_helper.dart';
+import 'package:ubuntu_calculator/ui/utils/functions.dart';
 
 class ButtonArea extends StatefulWidget {
   const ButtonArea({super.key});
@@ -11,7 +12,6 @@ class ButtonArea extends StatefulWidget {
 class _ButtonAreaState extends State<ButtonArea> {
   @override
   Widget build(BuildContext context) {
-    buttonPressed(String buttonText) {}
     return Expanded(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.end,
@@ -29,14 +29,26 @@ class _ButtonAreaState extends State<ButtonArea> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      buttonHelper('AC', const Color(0xff23252d),
-                          const Color(0xff02c984), () => buttonPressed('AC')),
-                      buttonHelper('+/-', const Color(0xff23252d),
-                          const Color(0xff02c984), () => buttonPressed('+/-')),
-                      buttonHelper('%', const Color(0xff23252d),
-                          const Color(0xff02c984), () => buttonPressed('%')),
-                      buttonHelper("÷", const Color(0xff23252d),
-                          const Color(0xffc14a51), () => buttonPressed('÷')),
+                      buttonHelper(
+                          'AC',
+                          const Color(0xff23252d),
+                          const Color(0xff02c984),
+                          () => Functions().buttonPressed('AC')),
+                      buttonHelper(
+                          '+/-',
+                          const Color(0xff23252d),
+                          const Color(0xff02c984),
+                          () => Functions().buttonPressed('+/-')),
+                      buttonHelper(
+                          '%',
+                          const Color(0xff23252d),
+                          const Color(0xff02c984),
+                          () => Functions().buttonPressed('%')),
+                      buttonHelper(
+                          "÷",
+                          const Color(0xff23252d),
+                          const Color(0xffc14a51),
+                          () => Functions().buttonPressed('÷')),
                     ],
                   ),
                   const SizedBox(
@@ -45,14 +57,26 @@ class _ButtonAreaState extends State<ButtonArea> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      buttonHelper('7', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('7')),
-                      buttonHelper('8', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('8')),
-                      buttonHelper('9', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('9')),
-                      buttonHelper("*", const Color(0xff23252d),
-                          const Color(0xffc14a51), () => buttonPressed('*')),
+                      buttonHelper(
+                          '7',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('7')),
+                      buttonHelper(
+                          '8',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('8')),
+                      buttonHelper(
+                          '9',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('9')),
+                      buttonHelper(
+                          "*",
+                          const Color(0xff23252d),
+                          const Color(0xffc14a51),
+                          () => Functions().buttonPressed('*')),
                     ],
                   ),
                   const SizedBox(
@@ -61,14 +85,26 @@ class _ButtonAreaState extends State<ButtonArea> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      buttonHelper('4', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('4')),
-                      buttonHelper('5', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('5')),
-                      buttonHelper('6', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('6')),
-                      buttonHelper("-", const Color(0xff23252d),
-                          const Color(0xffc14a51), () => buttonPressed('-')),
+                      buttonHelper(
+                          '4',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('4')),
+                      buttonHelper(
+                          '5',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('5')),
+                      buttonHelper(
+                          '6',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('6')),
+                      buttonHelper(
+                          "-",
+                          const Color(0xff23252d),
+                          const Color(0xffc14a51),
+                          () => Functions().buttonPressed('-')),
                     ],
                   ),
                   const SizedBox(
@@ -77,14 +113,26 @@ class _ButtonAreaState extends State<ButtonArea> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      buttonHelper('1', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('4')),
-                      buttonHelper('2', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('5')),
-                      buttonHelper('3', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('6')),
-                      buttonHelper("+", const Color(0xff23252d),
-                          const Color(0xffc14a51), () => buttonPressed('+')),
+                      buttonHelper(
+                          '1',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('4')),
+                      buttonHelper(
+                          '2',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('5')),
+                      buttonHelper(
+                          '3',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('6')),
+                      buttonHelper(
+                          "+",
+                          const Color(0xff23252d),
+                          const Color(0xffc14a51),
+                          () => Functions().buttonPressed('+')),
                     ],
                   ),
                   const SizedBox(
@@ -96,12 +144,21 @@ class _ButtonAreaState extends State<ButtonArea> {
                       const SizedBox(
                         width: 75,
                       ),
-                      buttonHelper('0', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('0')),
-                      buttonHelper('.', const Color(0xff23252d),
-                          const Color(0xffffffff), () => buttonPressed('.')),
-                      buttonHelper("=", const Color(0xff23252d),
-                          const Color(0xffc14a51), () => buttonPressed('=')),
+                      buttonHelper(
+                          '0',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('0')),
+                      buttonHelper(
+                          '.',
+                          const Color(0xff23252d),
+                          const Color(0xffffffff),
+                          () => Functions().buttonPressed('.')),
+                      buttonHelper(
+                          "=",
+                          const Color(0xff23252d),
+                          const Color(0xffc14a51),
+                          () => Functions().buttonPressed('=')),
                     ],
                   )
                 ],

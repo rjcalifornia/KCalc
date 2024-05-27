@@ -11,7 +11,7 @@ class CalculatorScreen extends StatefulWidget {
 class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   Widget build(BuildContext context) {
-    String equation = "0";
+    const equation = "0";
     String result = "0";
     String expression = "";
     double equationFontSize = 38.0;
@@ -48,14 +48,37 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         ),
       ),
       body: Padding(
-        padding: new EdgeInsets.all(20),
-        child: const Column(
+        padding: new EdgeInsets.all(40),
+        child: Column(
           children: [
-            SizedBox(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    equation,
+                    style: TextStyle(
+                      fontSize: 60,
+                      color: Colors.white38,
+                    ),
+                  ),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.backspace_outlined,
+                      color: Color(0xffc14a51)),
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  width: 30,
+                )
+              ],
+            ),
+            const SizedBox(
               height: 8,
             ),
             ButtonArea(),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
           ],
