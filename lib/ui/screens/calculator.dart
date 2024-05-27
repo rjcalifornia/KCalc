@@ -105,7 +105,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(40),
+        padding: const EdgeInsets.all(20),
         child: Column(
           children: [
             Row(
@@ -117,7 +117,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                         textAlign: TextAlign.left,
                         style: const TextStyle(
                             color: Colors.white, fontSize: 80))),
-                const Icon(Icons.more_vert, color: Colors.orange, size: 30),
                 const SizedBox(width: 20),
               ],
             ),
