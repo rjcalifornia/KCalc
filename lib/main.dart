@@ -6,8 +6,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
 
-  WindowManager.instance.setMinimumSize(const Size(480, 720));
-  WindowManager.instance.setMaximumSize(const Size(480, 720));
+  WindowManager.instance.setMinimumSize(const Size(480, 820));
+  WindowManager.instance.setMaximumSize(const Size(480, 820));
 
   runApp(const HomeScreen());
 }

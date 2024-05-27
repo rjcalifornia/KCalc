@@ -1,7 +1,6 @@
 // ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SwitchMode extends StatefulWidget {
   const SwitchMode({super.key});
@@ -36,9 +35,7 @@ class _SwitchModeState extends State<SwitchMode> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
-                onTap: () {
-                  print('Light');
-                },
+                onTap: () {},
                 child: const SizedBox(
                   height: 30,
                   child: Icon(
@@ -48,9 +45,7 @@ class _SwitchModeState extends State<SwitchMode> {
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  print('Dark');
-                },
+                onTap: () {},
                 child: const SizedBox(
                   height: 30,
                   child: Icon(
