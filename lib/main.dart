@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ubuntu_calculator/ui/screens/home.dart';
+import 'package:KCalc/ui/screens/home.dart';
 import 'package:window_manager/window_manager.dart';
 
 void main() async {

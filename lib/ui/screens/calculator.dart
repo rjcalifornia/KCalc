@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
-import 'package:ubuntu_calculator/ui/widgets/button_area.dart';
+import 'package:KCalc/ui/widgets/button_area.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({super.key});
@@ -69,7 +69,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         }
       }
     });
-    print(buttonText);
   }
 
   @override
