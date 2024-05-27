@@ -117,17 +117,17 @@ class _ButtonAreaState extends State<ButtonArea> {
                           '1',
                           const Color(0xff23252d),
                           const Color(0xffffffff),
-                          () => Functions().buttonPressed('4')),
+                          () => Functions().buttonPressed('1')),
                       buttonHelper(
                           '2',
                           const Color(0xff23252d),
                           const Color(0xffffffff),
-                          () => Functions().buttonPressed('5')),
+                          () => Functions().buttonPressed('2')),
                       buttonHelper(
                           '3',
                           const Color(0xff23252d),
                           const Color(0xffffffff),
-                          () => Functions().buttonPressed('6')),
+                          () => Functions().buttonPressed('3')),
                       buttonHelper(
                           "+",
                           const Color(0xff23252d),

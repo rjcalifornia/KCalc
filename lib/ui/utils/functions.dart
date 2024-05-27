@@ -1,5 +1,5 @@
 class Functions {
-  buttonPressed(String buttonText) {
+  Future buttonPressed(String buttonText) async {
     print(buttonText);
   }
 }

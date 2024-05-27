@@ -48,7 +48,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         ),
       ),
       body: Padding(
-        padding: new EdgeInsets.all(40),
+        padding: const EdgeInsets.all(40),
         child: Column(
           children: [
             Row(
