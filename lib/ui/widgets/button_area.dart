@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:KCalc/ui/components/button_helper.dart';
-import 'package:KCalc/ui/utils/functions.dart';
 
 class ButtonArea extends StatefulWidget {
   const ButtonArea({super.key, required this.function});
@@ -19,6 +18,7 @@ class _ButtonAreaState extends State<ButtonArea> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Expanded(
         child: Column(
