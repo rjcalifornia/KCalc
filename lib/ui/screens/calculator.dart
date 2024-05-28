@@ -136,7 +136,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                         textAlign: TextAlign.left,
                         style: const TextStyle(
                             color: Colors.white, fontSize: 50))),
-                const SizedBox(width: 20),
+                const SizedBox(width: 30),
               ],
             ),
             Container(
@@ -150,6 +150,9 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       buttonPressed('<');
                     },
                   ),
+                  const SizedBox(
+                    width: 34,
+                  )
                 ],
               ),
             ),
