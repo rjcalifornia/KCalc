@@ -34,7 +34,16 @@ class _ButtonAreaState extends State<ButtonArea> {
                 autofocus: true,
                 onKeyEvent: (event) {
                   if (event is KeyDownEvent && event.character != null) {
-                    widget.function(event.character);
+                    // print(event.logicalKey.keyLabel);
+                    dynamic detectKey = event.character;
+                    switch (event.logicalKey.keyLabel) {
+                      case 'Backspace':
+                        detectKey = 'del';
+                      case 'Enter':
+                        detectKey = '=';
+                    }
+
+                    widget.function(detectKey);
                   }
                 },
                 child: Wrap(
