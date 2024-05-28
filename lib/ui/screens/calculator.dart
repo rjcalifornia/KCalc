@@ -115,37 +115,43 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     child: Text(result,
                         textAlign: TextAlign.left,
                         style: const TextStyle(
-                            color: Colors.white, fontSize: 80))),
+                            color: Colors.white, fontSize: 50))),
                 const SizedBox(width: 20),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Text(
-                    equation,
-                    style: const TextStyle(
-                      fontSize: 60,
-                      color: Colors.white38,
-                    ),
-                  ),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.backspace_outlined,
-                      color: Color(0xffc14a51)),
-                  onPressed: () {
-                    buttonPressed('del');
-                  },
-                ),
-                const SizedBox(
-                  width: 30,
-                )
-              ],
+            SizedBox(
+              width: double.infinity,
+              height: 120,
+              child: Container(
+                  alignment: Alignment.bottomRight,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Text(
+                          equation,
+                          style: const TextStyle(
+                            fontSize: 22,
+                            color: Colors.white38,
+                          ),
+                        ),
+                      ),
+                    ],
+                  )),
             ),
-            const SizedBox(
-              height: 8,
+            Container(
+              alignment: Alignment.bottomRight,
+              child: Wrap(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.backspace_outlined,
+                        color: Color(0xffc14a51)),
+                    onPressed: () {
+                      buttonPressed('del');
+                    },
+                  ),
+                ],
+              ),
             ),
             ButtonArea(
               function: buttonPressed,
