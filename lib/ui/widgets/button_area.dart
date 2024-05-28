@@ -18,6 +18,27 @@ class _ButtonAreaState extends State<ButtonArea> {
     super.dispose();
   }
 
+  void validateInput(event) {
+    if (event is KeyDownEvent && event.character != null) {
+      dynamic detectKey = event.character;
+
+      switch (event.logicalKey.keyLabel) {
+        case 'Backspace':
+          detectKey = '<';
+        case 'Enter':
+          detectKey = '=';
+      }
+
+      bool keyPreValidation = true;
+
+      keyPreValidation = detectKey.toString().contains(RegExp(r'[0-9*#+-=<]'));
+
+      if (keyPreValidation) {
+        widget.function(detectKey);
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -32,19 +53,8 @@ class _ButtonAreaState extends State<ButtonArea> {
               child: KeyboardListener(
                 focusNode: _focusNode,
                 autofocus: true,
-                onKeyEvent: (event) {
-                  if (event is KeyDownEvent && event.character != null) {
-                    // print(event.logicalKey.keyLabel);
-                    dynamic detectKey = event.character;
-                    switch (event.logicalKey.keyLabel) {
-                      case 'Backspace':
-                        detectKey = 'del';
-                      case 'Enter':
-                        detectKey = '=';
-                    }
-
-                    widget.function(detectKey);
-                  }
+                onKeyEvent: (KeyEvent event) {
+                  validateInput(event);
                 },
                 child: Wrap(
                   //mainAxisAlignment: MainAxisAlignment.spaceEvenly,

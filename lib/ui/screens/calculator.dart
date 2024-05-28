@@ -32,7 +32,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       if (buttonText == "AC") {
         equation = "0";
         result = "0";
-      } else if (buttonText == "del") {
+      } else if (buttonText == "<") {
         equation = equation.substring(0, equation.length - 1);
         if (equation == "") {
           equation = "0";
@@ -147,7 +147,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     icon: const Icon(Icons.backspace_outlined,
                         color: Color(0xffc14a51)),
                     onPressed: () {
-                      buttonPressed('del');
+                      buttonPressed('<');
                     },
                   ),
                 ],
