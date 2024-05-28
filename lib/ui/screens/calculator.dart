@@ -107,18 +107,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text(result,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                            color: Colors.white, fontSize: 50))),
-                const SizedBox(width: 20),
-              ],
-            ),
             SizedBox(
               width: double.infinity,
               height: 120,
@@ -138,6 +126,18 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       ),
                     ],
                   )),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(result,
+                        textAlign: TextAlign.left,
+                        style: const TextStyle(
+                            color: Colors.white, fontSize: 50))),
+                const SizedBox(width: 20),
+              ],
             ),
             Container(
               alignment: Alignment.bottomRight,
