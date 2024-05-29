@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:math_expressions/math_expressions.dart';
 import 'package:KCalc/ui/widgets/button_area.dart';
 
@@ -78,6 +79,18 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       backgroundColor: const Color(0xff2c2c37),
       appBar: AppBar(
           elevation: 0,
+          actions: [
+            IconButton(
+              icon: const Icon(
+                Icons.close_outlined,
+                color: Color(0xfffafafa),
+              ),
+              tooltip: 'test',
+              onPressed: () {
+                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+              },
+            )
+          ],
           backgroundColor: const Color(0xff2c2c37),
           leading: Builder(builder: (context) {
             return IconButton(

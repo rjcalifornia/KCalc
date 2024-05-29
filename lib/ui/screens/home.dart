@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Calculator',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.blueGrey.shade900,
       ),
