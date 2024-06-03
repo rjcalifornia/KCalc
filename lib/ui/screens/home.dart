@@ -1,3 +1,4 @@
+import 'package:KCalc/ui/screens/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:KCalc/ui/screens/calculator.dart';
 import 'package:flutter/services.dart';
@@ -11,10 +12,22 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int currentIndex = 0;
+  final List<Widget> screens = [
+    const CalculatorScreen(),
+    const SettingsScreen()
+  ];
+
+  void onItemTapped(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    List<Widget> bodyWidgets = [CalculatorScreen()];
-    int index = 0;
+    // ignore: prefer_const_constructors
+
     return SafeArea(
         child: Scaffold(
             backgroundColor: const Color(0xff2c2c37),
@@ -48,16 +61,17 @@ class _HomeScreenState extends State<HomeScreen> {
             drawer: Drawer(
               child: ListView(
                 children: [
+                  const SizedBox(
+                    height: 60,
+                  ),
                   ListTile(
                     title: const Text('Basic'),
                     leading: GestureDetector(
                       child: const Icon(Icons.calculate_outlined),
                     ),
                     onTap: () {
-                      setState(() {
-                        index = 0;
-                        Navigator.pop(context);
-                      });
+                      onItemTapped(0);
+                      Navigator.pop(context);
                     },
                   ),
                   ListTile(
@@ -66,14 +80,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: const Icon(Icons.settings_outlined),
                     ),
                     onTap: () {
-                      setState(() {
-                        Navigator.pop(context);
-                      });
+                      onItemTapped(1);
+                      Navigator.pop(context);
                     },
                   ),
                 ],
               ),
             ),
-            body: bodyWidgets[index]));
+            body: screens[currentIndex]));
   }
 }
