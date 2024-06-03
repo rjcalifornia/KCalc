@@ -74,110 +74,67 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      backgroundColor: const Color(0xff2c2c37),
-      appBar: AppBar(
-          elevation: 0,
-          actions: [
-            IconButton(
-              icon: const Icon(
-                Icons.close_outlined,
-                color: Color(0xfffafafa),
-              ),
-              tooltip: 'Close',
-              onPressed: () {
-                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
-              },
-            )
-          ],
-          backgroundColor: const Color(0xff2c2c37),
-          leading: Builder(builder: (context) {
-            return IconButton(
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              icon: const Icon(
-                Icons.menu_outlined,
-                color: Color(0xfffafafa),
-              ),
-            );
-          })),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            ListTile(
-              title: const Text('About'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-          ],
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            SizedBox(
-              width: double.infinity,
-              height: 120,
-              child: Container(
-                  alignment: Alignment.bottomRight,
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Text(
-                          equation,
-                          style: const TextStyle(
-                            fontSize: 22,
-                            color: Colors.white38,
-                          ),
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        children: [
+          SizedBox(
+            width: double.infinity,
+            height: 120,
+            child: Container(
+                alignment: Alignment.bottomRight,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Text(
+                        equation,
+                        style: const TextStyle(
+                          fontSize: 22,
+                          color: Colors.white38,
                         ),
                       ),
-                    ],
-                  )),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text(result,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                            color: Colors.white, fontSize: 50))),
-                const SizedBox(width: 36),
+                    ),
+                  ],
+                )),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(result,
+                      textAlign: TextAlign.left,
+                      style:
+                          const TextStyle(color: Colors.white, fontSize: 50))),
+              const SizedBox(width: 36),
+            ],
+          ),
+          Container(
+            alignment: Alignment.bottomRight,
+            child: Wrap(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.backspace_outlined,
+                      color: Color(0xffc14a51)),
+                  onPressed: () {
+                    buttonPressed('<');
+                  },
+                ),
+                const SizedBox(
+                  width: 34,
+                )
               ],
             ),
-            Container(
-              alignment: Alignment.bottomRight,
-              child: Wrap(
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.backspace_outlined,
-                        color: Color(0xffc14a51)),
-                    onPressed: () {
-                      buttonPressed('<');
-                    },
-                  ),
-                  const SizedBox(
-                    width: 34,
-                  )
-                ],
-              ),
-            ),
-            ButtonArea(
-              function: buttonPressed,
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-          ],
-        ),
+          ),
+          ButtonArea(
+            function: buttonPressed,
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+        ],
       ),
-    ));
+    );
   }
 }

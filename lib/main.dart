@@ -9,5 +9,21 @@ void main() async {
   WindowManager.instance.setMinimumSize(const Size(480, 820));
   WindowManager.instance.setMaximumSize(const Size(480, 820));
 
-  runApp(const HomeScreen());
+  runApp(const CalcApp());
+}
+
+class CalcApp extends StatelessWidget {
+  const CalcApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Calculator',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.blueGrey.shade900,
+      ),
+      home: const HomeScreen(),
+    );
+  }
 }
