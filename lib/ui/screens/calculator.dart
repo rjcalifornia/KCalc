@@ -85,7 +85,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 Icons.close_outlined,
                 color: Color(0xfffafafa),
               ),
-              tooltip: 'test',
+              tooltip: 'Close',
               onPressed: () {
                 SystemChannels.platform.invokeMethod('SystemNavigator.pop');
               },
@@ -149,7 +149,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                         textAlign: TextAlign.left,
                         style: const TextStyle(
                             color: Colors.white, fontSize: 50))),
-                const SizedBox(width: 30),
+                const SizedBox(width: 36),
               ],
             ),
             Container(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:KCalc/ui/screens/calculator.dart';
+import 'package:window_manager/window_manager.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
       theme: ThemeData(
         primaryColor: Colors.blueGrey.shade900,
       ),
-      home: const CalculatorScreen(),
+      home: const DragToMoveArea(child: CalculatorScreen()),
     );
   }
 }
