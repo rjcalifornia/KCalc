@@ -11,11 +11,11 @@ class ButtonArea extends StatefulWidget {
 }
 
 class _ButtonAreaState extends State<ButtonArea> {
+  //final FocusNode _focusNode = FocusNode();
   final FocusNode _focusNode = FocusNode();
   @override
-  void dispose() {
-    _focusNode.dispose();
-    super.dispose();
+  void initState() {
+    super.initState();
   }
 
   void validateInput(event) {
@@ -41,6 +41,7 @@ class _ButtonAreaState extends State<ButtonArea> {
 
   @override
   Widget build(BuildContext context) {
+    FocusScope.of(context).requestFocus(_focusNode);
     return Expanded(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.end,
