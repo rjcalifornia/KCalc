@@ -79,8 +79,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(
                     height: 60,
                   ),
+                  const ListTile(
+                      title: Text(
+                    'KCalc',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
                   ListTile(
-                    title: const Text('Basic'),
+                    title: const Text('Standard'),
                     leading: GestureDetector(
                       child: const Icon(Icons.calculate_outlined),
                     ),
