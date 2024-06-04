@@ -32,6 +32,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Scaffold(
             backgroundColor: const Color(0xff2c2c37),
             appBar: AppBar(
+                flexibleSpace: GestureDetector(
+                  onLongPressDown: (details) {
+                    WindowManager.instance.startDragging();
+                  },
+                ),
                 elevation: 0,
                 actions: [
                   IconButton(
