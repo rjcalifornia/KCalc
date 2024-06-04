@@ -40,6 +40,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 elevation: 0,
                 actions: [
                   IconButton(
+                    onPressed: () {
+                      WindowManager.instance.minimize();
+                    },
+                    icon: const Icon(
+                      Icons.minimize_outlined,
+                      color: Color(0xfffafafa),
+                    ),
+                    tooltip: 'Minimize',
+                  ),
+                  IconButton(
                     icon: const Icon(
                       Icons.close_outlined,
                       color: Color(0xfffafafa),
