@@ -21,7 +21,9 @@ class CalcApp extends StatelessWidget {
       title: 'Calculator',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primaryColor: Colors.blueGrey.shade900, fontFamily: 'RaleWay'),
+          primaryColor: Colors.blueGrey.shade900,
+          fontFamily: 'RaleWay',
+          dividerColor: Colors.transparent),
       home: const HomeScreen(),
       //Dragging makes taps slower?
       //const DragToMoveArea(child: HomeScreen()),
