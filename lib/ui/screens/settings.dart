@@ -41,13 +41,26 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const SizedBox(
             height: 10,
           ),
-          const Card(
-            child: ExpansionTile(
+          Card(
+            color: Colors.blueGrey.shade900,
+            child: const ExpansionTile(
               title: Text(
                 'KCalc',
-                style: TextStyle(),
+                style: TextStyle(
+                    color: Color(0xfffafafa), fontWeight: FontWeight.w600),
               ),
-              children: [],
+              children: [
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  'KCalc Basic Calculator',
+                  style: TextStyle(color: Color(0xfffafafa)),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+              ],
             ),
           )
         ],
