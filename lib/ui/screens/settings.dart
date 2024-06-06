@@ -49,6 +49,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 style: TextStyle(
                     color: Color(0xfffafafa), fontWeight: FontWeight.w600),
               ),
+              iconColor: Color(0xfffafafa),
+              collapsedIconColor: Color(0xfffafafa),
               children: [
                 SizedBox(
                   height: 30,
