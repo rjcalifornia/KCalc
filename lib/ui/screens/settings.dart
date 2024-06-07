@@ -62,6 +62,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   'KCalc Basic Calculator',
                   style: TextStyle(color: Color(0xfffafafa)),
                 ),
+                const Text(
+                  '07.06.2024.001',
+                  style: TextStyle(
+                      color: Color(0xfffafafa), fontWeight: FontWeight.bold),
+                ),
                 const SizedBox(
                   height: 8,
                 ),
@@ -82,7 +87,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     );
                   },
                 ),
-                SizedBox(
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text(
+                  'This program comes with absolutely no warranty,',
+                  style: TextStyle(color: Color(0xfffafafa), fontSize: 10),
+                ),
+                const SizedBox(
                   height: 30,
                 ),
               ],
