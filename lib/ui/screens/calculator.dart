@@ -85,7 +85,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         children: [
           SizedBox(
             width: double.infinity,
-            height: 120,
+            height: 105,
             child: Container(
                 alignment: Alignment.bottomRight,
                 child: Column(
@@ -108,7 +108,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             children: <Widget>[
               Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text(result,
+                  child: SelectableText(result,
                       textAlign: TextAlign.left,
                       style:
                           const TextStyle(color: Colors.white, fontSize: 50))),

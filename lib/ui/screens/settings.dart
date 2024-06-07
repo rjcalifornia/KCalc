@@ -28,7 +28,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             'Settings',
             style: Theme.of(context)
                 .textTheme
-                .displaySmall!
+                .headlineSmall!
                 .copyWith(color: const Color(0xfffafafa)),
           ),
           const SizedBox(
@@ -53,10 +53,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     color: Color(0xfffafafa), fontWeight: FontWeight.w600),
               ),
               iconColor: const Color(0xfffafafa),
-              collapsedIconColor: Color(0xfffafafa),
+              collapsedIconColor: const Color(0xfffafafa),
               children: [
                 const SizedBox(
                   height: 30,
+                ),
+                Image.asset(
+                  'assets/keys.png',
+                  height: 50,
+                ),
+                const SizedBox(
+                  height: 18,
                 ),
                 const Text(
                   'KCalc Basic Calculator',
