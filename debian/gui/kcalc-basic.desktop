@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0.0
+Name=KCalc Basic
+GenericName=KCalc Basic
+Comment=Propposal to change the default KCalc app for KDE
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=calculator;
+Icon=kcalc_basic

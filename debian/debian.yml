@@ -1,0 +1,15 @@
+flutter_app: 
+  command: kcalc-basic
+  arch: x64
+  parent: /usr/local/lib
+  nonInteractive: true
+
+control:
+  Package: kcalc-basic
+  Version: 1.0.0
+  Architecture: amd64
+  Priority: optional
+  Depends:
+  Maintainer:
+  Description: Propposal to change the default KCalc app for KDE
+
