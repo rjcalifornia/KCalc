@@ -1,6 +1,6 @@
-# ubuntu_calculator
+# KCalc Basic
 
-A new Flutter project.
+A basic calculator written in Flutter. A propposal to replace default kcalc app for a Modern Calculator App.
 
 ## Getting Started
 
