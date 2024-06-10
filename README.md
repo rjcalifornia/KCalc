@@ -1,5 +1,5 @@
 # KCalc Basic
-<img src="assets/keys.png.jpg">
+<img src="assets/keys.png">
 
 
 A basic calculator written in Flutter. A propposal to replace default kcalc app for a Modern Calculator App.
