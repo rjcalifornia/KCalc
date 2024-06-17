@@ -56,6 +56,12 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
           ContextModel cm = ContextModel();
           result = '${exp.evaluate(EvaluationType.REAL, cm)}';
+          double evalResult = exp.evaluate(EvaluationType.REAL, cm);
+          if (evalResult.isInfinite) {
+            result = "Division by zero";
+            customDialog(context, 'Error: Division by zero');
+          }
+
           if (expression.contains('%')) {
             result = doesContainDecimal(result);
           }
@@ -75,6 +81,35 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   void initState() {
     super.initState();
+  }
+
+  static customDialog(context, loadingText) {
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text('Warning'),
+            content: Text(
+              loadingText,
+              style: Theme.of(context).textTheme.labelLarge,
+            ),
+            actions: [
+              TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: Theme.of(context).textTheme.labelLarge,
+                ),
+                child: const Text(
+                  'Close',
+                  style: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        });
   }
 
   @override
