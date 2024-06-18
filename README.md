@@ -18,6 +18,7 @@ The KCalc Basic Calculator app is a modern app written in Dart with Flutter that
 ## Build KCalc Basic
 
 - Run the command ``` flutter build linux ``` to get a release package
+- Go to build/linux/x64/release/bundle and rename the built app to kcalc-basic 
 - Activate the flutter_to_debian flutter package with the following command ``` dart pub global activate flutter_to_debian ```
 - Create the Debian/Kubuntu/Ubuntu deb package: ``` flutter_to_debian ```
 

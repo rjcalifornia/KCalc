@@ -98,7 +98,34 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   height: 30,
                 ),
                 const Text(
-                  'This program comes with absolutely no warranty,',
+                  'This program is free software; you can redistribute it and/or modify it',
+                  style: TextStyle(color: Color(0xfffafafa), fontSize: 10),
+                ),
+                const Text(
+                  'under the terms of the GNU General Public License as published by',
+                  style: TextStyle(color: Color(0xfffafafa), fontSize: 10),
+                ),
+                const Text(
+                  'the Free Software Foundation; either version 2 of the License,',
+                  style: TextStyle(color: Color(0xfffafafa), fontSize: 10),
+                ),
+                const Text(
+                  'or (at your option) any later version',
+                  style: TextStyle(color: Color(0xfffafafa), fontSize: 10),
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                const Text(
+                  'This program is distributed in the hope that it will be useful,',
+                  style: TextStyle(color: Color(0xfffafafa), fontSize: 10),
+                ),
+                const Text(
+                  'but WITHOUT ANY WARRANTY; without even the implied warranty',
+                  style: TextStyle(color: Color(0xfffafafa), fontSize: 10),
+                ),
+                const Text(
+                  'of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.',
                   style: TextStyle(color: Color(0xfffafafa), fontSize: 10),
                 ),
                 const SizedBox(
