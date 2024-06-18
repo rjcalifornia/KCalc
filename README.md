@@ -15,6 +15,12 @@ The KCalc Basic Calculator app is a modern app written in Dart with Flutter that
 - Conversion between many units of measurement.
 - Currency conversion.
 
+## Build KCalc Basic
+
+- Run the command ``` flutter build linux ``` to get a release package
+- Activate the flutter_to_debian flutter package with the following command ``` dart pub global activate flutter_to_debian ```
+- Create the Debian/Kubuntu/Ubuntu deb package: ``` flutter_to_debian ```
+
  ## Additional information:
 
 ![alt text](https://raw.githubusercontent.com/flutter/website/archived-master/src/_assets/image/flutter-lockup-bg.jpg "Flutter")
