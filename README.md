@@ -1,6 +1,6 @@
 # KCalc Basic
 <div style="text-align:center">
-<img src="assets/kcalc_preview.png" width="600">
+<img src="assets/kcalc_preview.png" width="800">
 </div>
 </br>
 A basic calculator written in Flutter. A propposal to replace default kcalc app for a Modern Calculator App.
