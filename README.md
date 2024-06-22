@@ -3,7 +3,6 @@
 <img src="assets/kcalc_preview.png" width="800">
 </div>
 </br>
-A basic calculator written in Flutter. A propposal to replace default kcalc app for a Modern Calculator App.
 
 The KCalc Basic Calculator app is a modern app written in Dart with Flutter that aims to be a replacement to the default KCalc KDE app. The app provides standard  calculator functionality.
 
