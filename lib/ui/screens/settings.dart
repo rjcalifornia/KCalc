@@ -62,7 +62,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
                 Image.asset(
                   'assets/keys.png',
-                  height: 50,
+                  height: 120,
                 ),
                 const SizedBox(
                   height: 18,
