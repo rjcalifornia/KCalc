@@ -6,6 +6,7 @@
 
 The KCalc Basic Calculator app is a modern app written in Dart with Flutter that aims to be a replacement to the default KCalc KDE app. The app provides standard  calculator functionality.
 
+
 ## Features
 - Standard Calculator functionality which offers basic operations and evaluates commands immediately as they are entered.
 
@@ -13,6 +14,11 @@ The KCalc Basic Calculator app is a modern app written in Dart with Flutter that
 - Scientific Calculator functionality.
 - Conversion between many units of measurement.
 - Currency conversion.
+
+
+## Assets
+
+- <a href="https://www.flaticon.com/authors/freepik" title="calculator icons">Calculator icons created by Freepik - Flaticon</a>
 
 ## Build KCalc Basic
 

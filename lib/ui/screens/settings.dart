@@ -18,6 +18,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     final Uri url =
         Uri.parse('https://github.com/rjcalifornia/KCalc/blob/master/LICENSE');
+
+    final Uri freepik = Uri.parse('https://www.flaticon.com/authors/freepik');
     return Padding(
       padding: const EdgeInsets.all(40),
       child: Column(
@@ -89,6 +91,26 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ),
                       icon: const Icon(
                         Icons.book_outlined,
+                        color: Color(0xfffafafa),
+                      ),
+                    );
+                  },
+                ),
+                const SizedBox(
+                  height: 4,
+                ),
+                Link(
+                  uri: freepik,
+                  target: LinkTarget.blank,
+                  builder: (BuildContext ctx, FollowLink? openLink) {
+                    return TextButton.icon(
+                      onPressed: openLink,
+                      label: const Text(
+                        'Icons by Freepik',
+                        style: TextStyle(color: Color(0xfffafafa)),
+                      ),
+                      icon: const Icon(
+                        Icons.web_asset_outlined,
                         color: Color(0xfffafafa),
                       ),
                     );
