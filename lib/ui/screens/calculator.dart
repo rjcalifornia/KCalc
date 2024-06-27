@@ -16,17 +16,43 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   String expression = "";
   double equationFontSize = 38.0;
   double resultFontSize = 48.0;
-
   void buttonPressed(String buttonText) {
-    //print(buttonText);
+    // Function to truncate and round decimals if necessary
     String doesContainDecimal(dynamic result) {
-      if (result.toString().contains('.')) {
-        List<String> splitDecimal = result.toString().split('.');
-        if (!(int.parse(splitDecimal[1]) > 0)) {
-          return result = splitDecimal[0].toString();
+      // Convert result to string for manipulation
+      String resultString = result.toString();
+
+      // Check if the result contains a decimal point
+      if (resultString.contains('.')) {
+        // Split the result into integer and decimal parts
+        List<String> splitDecimal = resultString.split('.');
+        String integerPart = splitDecimal[0];
+        String decimalPart = splitDecimal[1];
+
+        // If the decimal part has more than 10 digits, truncate and round
+        if (decimalPart.length > 10) {
+          // Get the first 10 digits
+          String truncatedDecimal = decimalPart.substring(0, 10);
+
+          // Get the 11th digit to determine rounding
+          int lastDigit = int.parse(decimalPart.substring(10, 11));
+
+          // Round the truncated decimal
+          int roundDigit = int.parse(truncatedDecimal.substring(9, 10));
+          if (lastDigit >= 5) {
+            roundDigit++;
+          }
+
+          // Update the truncated decimal part
+          truncatedDecimal = truncatedDecimal.substring(0, 9) +
+              roundDigit.toString(); // Update the 10th digit
+
+          // Combine integer and truncated decimal parts
+          return '$integerPart.$truncatedDecimal';
         }
       }
-      return result;
+      // Return the original result if it doesn't need truncation
+      return resultString;
     }
 
     setState(() {
@@ -35,7 +61,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         result = "0";
       } else if (buttonText == "<") {
         equation = equation.substring(0, equation.length - 1);
-        if (equation == "") {
+        if (equation.isEmpty) {
           equation = "0";
         }
       } else if (buttonText == "+/-") {
@@ -55,15 +81,14 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           Expression exp = p.parse(expression);
 
           ContextModel cm = ContextModel();
-          result = '${exp.evaluate(EvaluationType.REAL, cm)}';
           double evalResult = exp.evaluate(EvaluationType.REAL, cm);
+
           if (evalResult.isInfinite) {
             result = "Division by zero";
             customDialog(context, 'Error: Division by zero');
-          }
-
-          if (expression.contains('%')) {
-            result = doesContainDecimal(result);
+          } else {
+            // Format the result to limit to 10 decimal places
+            result = doesContainDecimal(evalResult);
           }
         } catch (e) {
           result = "Error";
@@ -72,7 +97,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         if (equation == "0") {
           equation = buttonText;
         } else {
-          equation = equation + buttonText;
+          equation += buttonText;
         }
       }
     });
@@ -138,17 +163,22 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   ],
                 )),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: SelectableText(result,
-                      textAlign: TextAlign.left,
-                      style:
-                          const TextStyle(color: Colors.white, fontSize: 50))),
-              const SizedBox(width: 36),
-            ],
+          Container(
+            alignment: Alignment.topRight,
+            child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SelectableText(result,
+                            textAlign: TextAlign.left,
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 50))),
+                    const SizedBox(width: 36),
+                  ],
+                )),
           ),
           Container(
             alignment: Alignment.bottomRight,
