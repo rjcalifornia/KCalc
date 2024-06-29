@@ -19,7 +19,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final Uri url =
         Uri.parse('https://github.com/rjcalifornia/KCalc/blob/master/LICENSE');
 
-    final Uri freepik = Uri.parse('https://www.flaticon.com/authors/freepik');
     return Padding(
       padding: const EdgeInsets.all(40),
       child: Column(
