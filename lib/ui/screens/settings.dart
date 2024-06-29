@@ -97,26 +97,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   },
                 ),
                 const SizedBox(
-                  height: 4,
-                ),
-                Link(
-                  uri: freepik,
-                  target: LinkTarget.blank,
-                  builder: (BuildContext ctx, FollowLink? openLink) {
-                    return TextButton.icon(
-                      onPressed: openLink,
-                      label: const Text(
-                        'Icons by Freepik',
-                        style: TextStyle(color: Color(0xfffafafa)),
-                      ),
-                      icon: const Icon(
-                        Icons.web_asset_outlined,
-                        color: Color(0xfffafafa),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(
                   height: 30,
                 ),
                 const Text(
