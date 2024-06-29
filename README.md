@@ -16,10 +16,6 @@ The KCalc Basic Calculator app is a modern app written in Dart with Flutter that
 - Currency conversion.
 
 
-## Assets
-
-- <a href="https://www.flaticon.com/authors/freepik" title="calculator icons">Calculator icons created by Freepik - Flaticon</a>
-
 ## Build KCalc Basic
 
 - Run the command ``` flutter build linux ``` to get a release package
